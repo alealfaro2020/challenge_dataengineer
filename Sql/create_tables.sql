@@ -27,7 +27,7 @@ CREATE TABLE item (
     created_at TIMESTAMP DEFAULT NOW()
 );
 
-CREATE TABLE "order" (
+CREATE TABLE orders (
     order_id SERIAL PRIMARY KEY,
     buyer_id INT REFERENCES customer(customer_id),
     order_date DATE,
@@ -37,7 +37,7 @@ CREATE TABLE "order" (
 
 CREATE TABLE order_item (
     order_item_id SERIAL PRIMARY KEY,
-    order_id INT REFERENCES "order"(order_id),
+    order_id INT REFERENCES orders(order_id),
     item_id INT REFERENCES item(item_id),
     quantity INT,
     unit_price DECIMAL(10, 2),
