@@ -66,8 +66,10 @@ https://auth.mercadolibre.com.ar/authorization?response_type=code
 
 - Almacenar access_token para futuras llamadas
 
+3- Mercado Libre requiere que las redirect_uri usen HTTPS, por lo que no es posible apuntar directamente a http://localhost:5000 
+  Para sortear esto, utilizamos ngrok, que proporciona una URL pública y segura (HTTPS) hacia tu servidor local
 
-3. Endpoints intentados
+4. Endpoints intentados
 
 GET /sites/MLA/search 403 Forbidden
 
