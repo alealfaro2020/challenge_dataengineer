@@ -46,3 +46,37 @@ Contiene consultas SQL que responden a necesidades de negocio como:
 
 # Parte 2 - Apis
 
+1. Prerrequisitos
+Tener una cuenta creada en Mercado Libre Developers (Development)
+
+Obtener Client ID y Client Secret desde tu aplicación en el dashboard de ML 
+
+Instalar Python 3.8+ y dependencias del proyecto (Flask, requests,pandas)
+
+2. Flujo de autenticación (OAuth2)
+
+- Redirigir al usuario a:
+
+https://auth.mercadolibre.com.ar/authorization?response_type=code
+&client_id=<TU_CLIENT_ID>&redirect_uri=<TU_REDIRECT_URI>
+
+- Capturar el parámetro code al volver a tu servidor Flask.
+
+- Intercambiar code por access_token vía POST
+
+- Almacenar access_token para futuras llamadas
+
+
+3. Endpoints intentados
+
+GET /sites/MLA/search 403 Forbidden
+
+GET /items/{Item_Id} 403 Forbidden
+
+
+No se pudo acceder a los endpoints por un cambio en la politica de MELI, ya no son publicos estos endpoints y estan deprecados
+Basta con probar lo siguiente: curl "https://api.mercadolibre.com/sites/MLA/search?q=google%20home"
+
+Devuelve el siguiente error: 
+
+{"code":"unauthorized","message":"authorization value not present"}
