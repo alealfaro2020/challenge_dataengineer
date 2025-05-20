@@ -17,7 +17,6 @@ La base de datos está compuesta por las siguientes tablas:
 - `order_item`: Detalle de cada producto dentro de una orden.
 - `item_daily_snapshot`: Tabla de snapshots diarios de estado y precio de cada ítem (pensado para reprocesos/ETL).
 
-Puedes visualizar el DER en [dbdiagram.io](https://dbdiagram.io) usando el archivo `der.dbml`.
 
 ---
 
