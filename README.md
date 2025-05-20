@@ -39,8 +39,7 @@ Contiene consultas SQL que responden a necesidades de negocio como:
 ## 🧰 Tecnologías
 
 - PostgreSQL
-- SQL (estándar con extensiones PL/pgSQL)
-- Visualización del modelo: [dbdiagram.io](https://dbdiagram.io)
+- SQL 
 
 
 # Parte 2 - Apis
